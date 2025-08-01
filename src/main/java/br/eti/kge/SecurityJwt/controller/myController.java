@@ -1,11 +1,3 @@
-/*
-* _  ______        _____ _   _   ____       
-* | |/ / ___| ___  | ____| |_(_) | __ ) _ __ 
-* | ' / |  _ / _ \ |  _| | __| | |  _ \| '__|
-* | . \ |_| |  __/_| |___| |_| |_| |_) | |   
-* |_|\_\____|\___(_)_____|\__|_(_)____/|_|   
-*
- */
 package br.eti.kge.SecurityJwt.controller;
 
 import java.util.HashMap;
@@ -19,16 +11,27 @@ import org.springframework.web.bind.annotation.RestController;
  * Controller para demonstrar acesso public e acesso private em
  * endpoints no geral.
  *
- * @author KGe
+ * @author Enrico Mendrot
  */
+
 @RestController
 @RequestMapping("/")
 public class myController {
 
+    /**
+     * É feito para que cada um tenha um identificador unico, ou seja,
+     * restringindo a permissão para cada um
+     * @return vai retornar o model, cujo está com as informações de 'id' e de token. Além disso, caso o usuario não tenha permissão vai ser mostrado a permissão
+     * @HashMap é um identificador unico que não pode existir outro igual
+     */
+    
     // Apenas ADMIN pode ter acesso.
     @GetMapping("/manager")
     public Map<String, Object> privateManageEndpoint() {
         Map<String, Object> model = new HashMap<String, Object>();
+        /**
+         * @UUID.randomUUID().toString() Responsável por criar um identificador único automaticamente.
+         */
         model.put("id", UUID.randomUUID().toString());
         model.put("content", "Manager Endpoint: Area Apenas para ADMINS!!!");
         return model;
