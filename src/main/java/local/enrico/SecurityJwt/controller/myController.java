@@ -1,4 +1,4 @@
-package br.eti.kge.SecurityJwt.controller;
+package local.enrico.SecurityJwt.controller;
 
 import java.util.HashMap;
 import java.util.Map;

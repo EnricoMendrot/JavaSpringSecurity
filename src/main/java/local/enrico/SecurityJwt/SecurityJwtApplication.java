@@ -1,4 +1,4 @@
-package br.eti.kge.SecurityJwt;
+package local.enrico.SecurityJwt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

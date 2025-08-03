@@ -1,4 +1,4 @@
-package br.eti.kge.SecurityJwt;
+package local.enrico.SecurityJwt;
 
 
 import io.jsonwebtoken.SignatureAlgorithm;

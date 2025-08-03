@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package br.eti.kge.SecurityJwt.security.entites;
+package local.enrico.SecurityJwt.security.entites;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,11 +29,13 @@ public class User implements UserDetails {
 
     @Column(nullable = false, length = 64)
     private String password;
-    public User() { }
+    
+    public User() { 
+    }
 
     public User(String email, String password) {
-    this.email = email;
-    this.password = password;
+        this.email = email;
+        this.password = password;
     }
 
     public Integer getId() {
